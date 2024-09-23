@@ -16,6 +16,11 @@ import DockerIcon from '../../assets/docker.svg';
 import CSSIcon from '../../assets/css3.svg';
 import MySQLIcon from '../../assets/mysql.svg';
 import PostgreSQLIcon from '../../assets/postgresql.svg';
+import PythonIcon from '../../assets/python.svg';
+import NumpyIcon from '../../assets/numpy.svg';
+import PandasIcon from '../../assets/pandas.svg';
+import NodeIcon from '../../assets/nodedotjs.svg'
+import AndroidIcon from '../../assets/android.svg'
 
 
 function Home() {
@@ -25,37 +30,48 @@ function Home() {
     { name: "Next", icon: NextIcon },
     { name: "Vercel", icon: VercelIcon },
     { name: "Express", icon: ExpressIcon },
-    { name: "Electron", icon: ElectronIcon },
+    { name: "Node", icon: NodeIcon },
     
     // Java 관련
     { name: "Kotlin", icon: KotlinIcon },
     { name: "Spring", icon: SpringIcon },
-    { name: "Django", icon: DjangoIcon },
-    { name: "AWS", icon: AWSIcon },
-    
+  
     // OS 관련
     { name: "Linux", icon: LinuxIcon },
-    { name: "Git", icon: GitIcon },
     { name: "Docker", icon: DockerIcon },
     
     // Utilities 관련
+    { name: "CSS", icon: CSSIcon },
+    { name: "AWS", icon: AWSIcon },
+    { name: "Git", icon: GitIcon },
+    { name: "Electron", icon: ElectronIcon },
+    { name: "Android", icon: AndroidIcon },
+
     { name: "MySQL", icon: MySQLIcon },
     { name: "PostgreSQL", icon: PostgreSQLIcon },
-    { name: "CSS", icon: CSSIcon },
+    
+    { name: "Django", icon: DjangoIcon },
+    { name: "Python", icon: PythonIcon },
+    { name: "Numpy", icon: NumpyIcon },
+    { name: "Pandas", icon: PandasIcon },
   ];
   
   const categories = [
     { name: "JavaScript", bgColor: "bg-yellow-200" },
-    { name: "Server", bgColor: "bg-blue-200" },
-    { name: "OS", bgColor: "bg-green-200" },
-    { name: "Utilities", bgColor: "bg-red-200" }
+    { name: "Java", bgColor: "bg-green-200" },
+    { name: "OS", bgColor: "bg-blue-200" },
+    { name: "Utilities", bgColor: "bg-red-200" },
+    { name: "Database", bgColor: "bg-gray-200" },
+    { name: "Python", bgColor: "bg-white" }
   ];
   
   const getCategoryIndex = (index: number) => {
     if (index < 5) return 0; // JavaScript
-    if (index < 10) return 1; // Server
-    if (index < 15) return 2; // OS
-    return 3; // Utilities
+    if (index < 7) return 1; // Server
+    if (index < 9) return 2; // OS
+    if (index < 14) return 3; // OS
+    if (index < 16) return 4; // OS
+    return 5; // Utilities
   };
 
   return (
